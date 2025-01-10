@@ -1,16 +1,29 @@
 
-export default function MainPage() {
+import React from 'react'
+
+const Placeholder = (props) => {
   return (
-    <main>
-      <h1>Fun facts about react</h1>
-      <ul className="fact">
-        <li>Was first released in 2013</li>
-        <li>was originally created by Jordan Walke</li>
-        <li>Has well over 200K stars on GitHub</li>
-        <li>Is Mainatained bt meta</li>
-        <li>Power thousands od enterprise apps, including mobile apps</li>
-      </ul>
-      
-    </main>
+    <div>
+      <article className="journal">
+      <div className="main-image-container">
+      <img className= 'main-image' src={props.img.src} alt={props.img.alt} />
+      </div>
+        <div>
+        <img  className="marker" src="src/assets/marker.png" alt="marker" width={'20px'} />
+          <span >{ props.country}</span>
+          <a href={props.googleMapsUrl}
+        > View on google maps</a>
+        <h2>{props.title}</h2>
+          <p>{props.date}</p>
+        <p>{props.description} </p>
+        </div>
+    
+      </article>
+      </div>
   )
 }
+
+export default Placeholder
+
+
+
